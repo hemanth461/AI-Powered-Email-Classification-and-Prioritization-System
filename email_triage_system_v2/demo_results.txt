@@ -1,0 +1,16 @@
+======================================================================
+EMAIL TRIAGE SYSTEM - LIVE DEMONSTRATION
+======================================================================
+
+1. Loading ML Model...
+Traceback (most recent call last):
+  File "C:\Users\shres\.gemini\antigravity\scratch\message_categorization\demo.py", line 142, in <module>
+    demo_classification()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\shres\.gemini\antigravity\scratch\message_categorization\demo.py", line 32, in demo_classification
+    print(f"   \u2713 Model loaded with {len(model.classes_)} categories")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shres\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 3: character maps to <undefined>

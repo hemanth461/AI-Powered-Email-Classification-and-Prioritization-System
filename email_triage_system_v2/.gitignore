@@ -1,0 +1,9 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Ignore BERT model
+email_triage_system_v2/models/bert/
+*.safetensors

@@ -10,13 +10,17 @@ import os
 class TriageDatabase:
     """Manages database operations for email triage logging."""
     
-    def __init__(self, db_path='data/email_triage.db'):
+    def __init__(self, db_path=None):
         """
         Initialize database connection.
         
         Args:
             db_path (str): Path to SQLite database file
         """
+        if db_path is None:
+            src_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(src_dir)
+            db_path = os.path.join(project_root, 'data', 'email_triage.db')
         self.db_path = db_path
         self._ensure_directory()
         self.connection = None

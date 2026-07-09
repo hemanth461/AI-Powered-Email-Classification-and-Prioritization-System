@@ -9,7 +9,12 @@ import os
 import re
 
 class BertEmailClassifier:
-    def __init__(self, model_dir='models/bert'):
+    def __init__(self, model_dir=None):
+        if model_dir is None:
+            src_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(src_dir)
+            model_dir = os.path.join(project_root, 'models', 'bert')
+            
         self.model_path = os.path.join(model_dir, 'fine_tuned_model')
         self.tokenizer_path = os.path.join(model_dir, 'tokenizer')
         self.encoder_path = os.path.join(model_dir, 'label_encoder.joblib')
